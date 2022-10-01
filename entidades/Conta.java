@@ -1,19 +1,32 @@
 package entidades;
 
+import java.util.ArrayList;
+
 /**
  * Conta
  */
 public class Conta {
 
     private int idConta;
-    private int numero;
+    private String numero;
     private Agencia agencia;
+    private ArrayList<Transacao> transacoes = new ArrayList<>();
     private Pessoa pessoa;
     private double saldo;
     private double limite;
     public static int contadorBancos = 0;
 
     public Conta() {
+    }
+
+    public Conta(int idConta, String numero, Agencia agencia, ArrayList<Transacao> transacoes, Pessoa pessoa,
+            double limite) {
+        this.idConta = idConta;
+        this.numero = numero;
+        this.agencia = agencia;
+        this.transacoes = transacoes;
+        this.pessoa = pessoa;
+        this.limite = limite;
     }
 
     public int getIdConta() {
@@ -24,7 +37,7 @@ public class Conta {
         this.idConta = idConta;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
@@ -57,6 +70,14 @@ public class Conta {
     }
 
     public void depositar() {
+
+    }
+
+    public void sacar() {
+
+    }
+
+    public void transferir() {
 
     }
 }

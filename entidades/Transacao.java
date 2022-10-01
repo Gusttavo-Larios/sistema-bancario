@@ -13,7 +13,19 @@ public class Transacao {
     private String historico;
     private double valor;
     private char letra;
+
     public static int contadorTransacoes = 0;
+
+    Transacao() {
+    }
+
+    Transacao(Conta conta, int id, Date data, String historico, double valor, char letra) {
+        this.conta = conta;
+        this.id = id;
+        this.data = data;
+        this.historico = historico;
+        this.valor = valor;
+    }
 
     public Conta getConta() {
         return conta;

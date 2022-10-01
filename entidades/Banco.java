@@ -1,17 +1,26 @@
 package entidades;
 
+import java.util.ArrayList;
+
 /**
  * Banco
  */
 public class Banco {
 
     private int id;
-    private Agencia agencia;
+    private ArrayList<Agencia> agencias = new ArrayList<>();
     private String nome;
     private int numero;
     public static int contadorBancos = 0;
 
     public Banco() {
+    }
+
+    public Banco(int id, ArrayList<Agencia> agencias, String nome, int numero) {
+        this.agencias = agencias;
+        this.id = id;
+        this.nome = nome;
+        this.numero = numero;
     }
 
     public int getId() {
@@ -22,12 +31,12 @@ public class Banco {
         this.id = id;
     }
 
-    public Agencia getAgencia() {
-        return agencia;
+    public ArrayList<Agencia> getAgencia() {
+        return agencias;
     }
 
-    public void setAgencia(Agencia agencia) {
-        this.agencia = agencia;
+    public void setAgencia(ArrayList<Agencia> agencias) {
+        this.agencias = agencias;
     }
 
     public String getNome() {
